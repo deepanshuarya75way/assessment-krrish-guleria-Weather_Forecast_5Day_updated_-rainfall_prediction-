@@ -149,6 +149,25 @@ button:hover { background: linear-gradient(135deg, #222, #444); transform: trans
 .desc { font-size: 14px; margin-top: 15px; opacity: 0.8; line-height: 1.6; font-weight: 500; }
 .error-box { background: rgba(255, 75, 75, 0.9); padding: 15px; border-radius: 15px; font-weight: 600; width: fit-content; margin: 0 auto 20px auto; }
 
+.footer{
+    margin-top: 50px;
+    padding: 20px 10px;
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer p{
+    margin: 5px 0;
+}
+
+.footer strong{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 
 /* add a mobile variant */
