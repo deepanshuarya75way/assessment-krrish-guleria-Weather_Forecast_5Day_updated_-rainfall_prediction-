@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    font-family: 'Outfit', sans-serif; /* Modern, round, friendly font */
+    font-family: 'Outfit', sans-serif;
     color: white;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    transition: background 1s ease-in-out; /* Smooth fade between weather changes */
+    align-items: center;
+    transition: background 1s ease-in-out;
 }
 
 
@@ -23,7 +23,7 @@ body.cloudy, body.overcast, body.foggy { background: linear-gradient(135deg, #75
     text-align: center;
     width: 95%;
     max-width: 900px;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 /* --- AI GLOW BADGE --- */
@@ -149,16 +149,16 @@ button:hover { background: linear-gradient(135deg, #222, #444); transform: trans
 .desc { font-size: 14px; margin-top: 15px; opacity: 0.8; line-height: 1.6; font-weight: 500; }
 .error-box { background: rgba(255, 75, 75, 0.9); padding: 15px; border-radius: 15px; font-weight: 600; width: fit-content; margin: 0 auto 20px auto; }
 
+
 .footer{
-    width:100%;
     text-align:center;
-    margin-top:60px;
+    margin-top:50px;
     margin-bottom:20px;
-    padding:20px 0;
 }
 
 .footer p{
-    margin: 5px 0;
+    margin:5px 0;
+    color:white;
 }
 
 .footer strong{
