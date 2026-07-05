@@ -154,17 +154,20 @@ button:hover { background: linear-gradient(135deg, #222, #444); transform: trans
     text-align:center;
     margin-top:50px;
     margin-bottom:20px;
+
 }
 
 .footer p{
     margin:5px 0;
-    color:white;
+    color: black;
+    font-size: 18px;
+    font-weight: 650;
 }
 
 .footer strong{
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
+    color: black;
+    font-size: 18px;
+    font-weight: 650;
 }
 
 
