@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     transition: background 1s ease-in-out; /* Smooth fade between weather changes */
 }
 
@@ -23,7 +23,7 @@ body.cloudy, body.overcast, body.foggy { background: linear-gradient(135deg, #75
     text-align: center;
     width: 95%;
     max-width: 900px;
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 /* --- AI GLOW BADGE --- */
@@ -150,12 +150,11 @@ button:hover { background: linear-gradient(135deg, #222, #444); transform: trans
 .error-box { background: rgba(255, 75, 75, 0.9); padding: 15px; border-radius: 15px; font-weight: 600; width: fit-content; margin: 0 auto 20px auto; }
 
 .footer{
-    margin-top: 50px;
-    padding: 20px 10px;
-    text-align: center;
-    color: rgba(255,255,255,0.9);
-    font-size: 14px;
-    line-height: 1.6;
+    width:100%;
+    text-align:center;
+    margin-top:60px;
+    margin-bottom:20px;
+    padding:20px 0;
 }
 
 .footer p{
