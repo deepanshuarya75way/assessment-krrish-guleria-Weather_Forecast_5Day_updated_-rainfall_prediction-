@@ -3,7 +3,7 @@ import joblib
 import requests
 import pandas as pd
 from datetime import datetime
-
+import math
 import os
 
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
@@ -325,8 +325,61 @@ def predict():
         
         else:
             return render_template('index.html', error="City Not Found!", city=user_input)
-        
-        
+
+
+@app.route("/region-risk")
+def region-risk():
+    try:
+        lat = float(request.args.get("lat"))
+        lon = float(request.args.get("lon"))
+        points=[]
+        for lat_change in [-0,25,0,0,25]:
+            for lon_change in [-0,25,0,0,25]:
+                p_lat = lat * lat_change
+                p_lon = lon=lon_change
+
+                url="https://api.open-meteo.com/v1/forecast"
+                params={
+                    "latitude": p_lat,
+                    "longitude": p_lon,
+                    "current":"FeelsLikeMax, WindSpeedMax","hourly": "avg_clouds",
+                    "timezone":"auto", "forecast_days": 1
+                }
+
+                response =requests.get(url, params=params, data = response.json())
+                rain =max(data["hourly"]['avg_clouds'])
+                
+                if rain >= 80:
+                    risk = "Severe"
+                    color="red"
+                elif rain >=60:
+                    risk = "High"
+                    color="yellow"
+            
+                elif rain >=40:
+                    risk = "Moderate"
+                    color="green"
+
+                else:
+                    risk = "Low"
+                    color = "blue"
+
+                params.append((
+                    "lat":p_lat,
+                    "lon":p_lon,
+                    "rain": rain,
+                    "risk":risk,
+                    "color":color,
+                    
+                ))
+
+                
+
+                
+
+
+
+
                     
 if __name__ == '__main__':
     app.run(debug=True)

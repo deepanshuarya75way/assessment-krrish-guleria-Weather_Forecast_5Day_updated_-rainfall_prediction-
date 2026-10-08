@@ -126,7 +126,12 @@ button:hover { background: linear-gradient(135deg, #222, #444); transform: trans
 }
 .weather-card:hover { transform: translateY(-15px); background: rgba(255, 255, 255, 0.25); }
 
-
+#regional-map{
+    width: 100%;
+    height: 400px;
+    margin-top: 25px;
+    border-radius: 20px;
+}
 
 
 
